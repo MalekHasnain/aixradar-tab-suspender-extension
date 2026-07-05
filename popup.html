@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tab Suspender Pro</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏸ Tab Suspender Pro</h1>
+    </header>
+
+    <section class="controls">
+      <div class="toggle-row">
+        <label for="autoToggle">Auto-Suspend</label>
+        <label class="switch">
+          <input type="checkbox" id="autoToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="timeout-row">
+        <label for="timeoutSelect">Timeout</label>
+        <select id="timeoutSelect">
+          <option value="5">5 min</option>
+          <option value="15" selected>15 min</option>
+          <option value="30">30 min</option>
+          <option value="60">60 min</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="whitelist">
+      <div class="whitelist-row">
+        <button id="whitelistCurrentBtn" class="btn btn-secondary">➕ Whitelist Current Site</button>
+      </div>
+      <div id="whitelistContainer">
+        <p class="empty-state" id="whitelistEmpty">No whitelisted sites</p>
+        <ul id="whitelistList"></ul>
+      </div>
+    </section>
+
+    <section class="stats">
+      <h2>Stats</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-value" id="suspendedCount">0</span>
+          <span class="stat-label">Suspended</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="memorySaved">0 MB</span>
+          <span class="stat-label">Memory Saved</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="suspendNowBtn" class="btn btn-primary">💤 Suspend Now</button>
+      <button id="unsuspendAllBtn" class="btn btn-danger">▶ Unsuspend All</button>
+    </section>
+
+    <footer>
+      <p>Tab Suspender Pro v1.0.0</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tab Suspended</title>
+  <link rel="stylesheet" href="suspended.css" />
+</head>
+<body>
+  <div class="suspended-container">
+    <div class="suspended-card">
+      <div class="icon">💤</div>
+      <h1>Tab Suspended</h1>
+      <p class="subtitle">This tab was suspended to save memory.</p>
+
+      <div class="url-box">
+        <span class="url-label">Original URL:</span>
+        <span class="url-value" id="originalUrl">—</span>
+      </div>
+
+      <button id="restoreBtn" class="restore-btn">▶ Restore Tab</button>
+
+      <p class="hint">The tab will be restored to its original page.</p>
+    </div>
+  </div>
+
+  <script src="suspended.js"></script>
+</body>
+</html>
