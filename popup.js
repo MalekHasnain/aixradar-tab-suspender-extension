@@ -141,5 +141,6 @@
     }
   });
 
-  document.addEventListener('DOMContentLoaded', init);
+  // DOM is already loaded (script at bottom of HTML), init directly
+  init();
 })();
